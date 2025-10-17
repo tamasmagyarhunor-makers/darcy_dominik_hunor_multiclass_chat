@@ -55,7 +55,8 @@ def test_coach_can_upload_submissions_for_students():
     coach.add_student(student2)
     coach.upload_submission_for_students('tdd-a-function')
 
-    student.assert_called_once
-    student2.assert_called_once
+    student.add_submission.assert_called_once_with('tdd-a-function')
+    student2.add_submission.assert_called_once_with('tdd-a-function')
+
 
     
