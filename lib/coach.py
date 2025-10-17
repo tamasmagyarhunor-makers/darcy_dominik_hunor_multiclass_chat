@@ -21,6 +21,6 @@ class Coach:
         
         return ", ".join(names)
     
-    def upload_submission_for_student(self, submission):
+    def upload_submission_for_students(self, submission):
         for student in self.students:
             student.add_submission(submission)
