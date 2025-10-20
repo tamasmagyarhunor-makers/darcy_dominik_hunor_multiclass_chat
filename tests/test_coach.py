@@ -45,10 +45,7 @@ def test_coach_can_print_student_names():
 
 def test_coach_can_upload_submissions_for_students():
     student = Mock()
-    student.count_submissions.return_value = 1
-
     student2 = Mock()
-    student2.count_submissions.return_value = 1
 
     coach = Coach('Eddie')
     coach.add_student(student)
