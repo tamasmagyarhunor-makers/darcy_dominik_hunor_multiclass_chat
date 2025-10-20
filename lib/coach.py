@@ -14,10 +14,7 @@ class Coach:
         return count
     
     def print_student_names(self):
-        names = []
-
-        for student in self.students:
-            names.append(student.name)
+        names = [student.name for student in self.students]
         
         return ", ".join(names)
     
