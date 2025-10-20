@@ -52,6 +52,9 @@ def test_coach_can_upload_submissions_for_students():
     coach.add_student(student2)
 
     coach.upload_submission_for_students('HUNOR-extra-challenge')
-    assert student.submissions[1] == 'HUNOR-extra-challenge'
-    assert student2.submissions[2] == 'HUNOR-extra-challenge'
+    
+    assert 'HUNOR-extra-challenge' in student.submissions
+    assert 'HUNOR-extra-challenge' in student2.submissions
+    assert len(student.submissions) == 2
+    assert len(student2.submissions) == 3
     assert coach.count_submissions() == 5
